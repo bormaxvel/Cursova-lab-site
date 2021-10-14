@@ -1,0 +1,23 @@
+
+[ 
+    {
+        "name": "Grey Tshirt",
+        "price": 74,
+        "quantity": 1
+    },
+    {
+        "name": "Grey Hoddie",
+        "price": 16,
+        "quantity": 4
+    },
+    {
+        "name": "Black Tshirt",
+        "price": 25,
+        "quantity": 7
+    },
+    {
+        "name": "Black Hoddie",
+        "price": 35,
+        "quantity": 6
+    }
+]
