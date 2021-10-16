@@ -7,6 +7,11 @@ $dark: #242a31
 $black: #181c22
     
 *
+    -webkit-transition-property: all
+    -webkit-transition-duration: .2s
+    -moz-transition-timing-function: cubic-bezier(100,50,21,6)
+    -moz-transition-property: all
+    -moz-transition-timing-function: cubic-bezier(100,50,21,6)
     margin: 0px
     padding: 0px
     font-family: monospace
@@ -20,9 +25,49 @@ h1
 h2
     color: $dark
 
+
 header
-    height: 100px
+    a
+        text-decoration: none
+        color: $acs2
+    .logo
+        min-width: 550px
+        background-color: $gray
+        border-radius: 10px 10px 0px 10px
+        padding: 10px
+    height: 70px
     padding: 10px 5% 10px 5%
+    .menus
+        min-width: 550px
+        display: flex
+        justify-content: right
+        .btn
+            span
+                position: absolute
+                top:-20px
+            color: $acs2
+            padding: 2px
+            position: relative
+            border-top: 20px solid $gray
+            border-left: 30px solid transparent
+            height: 0px
+            width: 70px
+            &:hover
+                border-top: 30px solid $dark
+                span
+                    top:-22.5px
+
+            
+        .mbtns
+            width: 80px
+            border-top: 25px solid $gray
+            &:hover
+                border-top: 35px solid $dark
+                span
+                    top:-25px
+        .bactive
+            border-top: 25px solid #485e6d
+
 
 footer
     padding: 10px 5% 10px 5%
@@ -31,7 +76,8 @@ footer
 //Дизайн головної сторінки нижче
 .container
     padding: 50px 5% 50px 5%
-    border: solid $black 2px
+    border: dashed 1px #00000050
+    
 
 
 //Дизайн лабораторної сторінки нижче
@@ -42,6 +88,7 @@ footer
     #sidebar
         padding: 5px
         min-width: 250px
+        min-height: 100px
         width: auto
     #labspace
         padding: 5px
@@ -55,4 +102,4 @@ footer
 
 .container2
     
-    border: solid $black 2px
+    border: dashed 1px #00000050
