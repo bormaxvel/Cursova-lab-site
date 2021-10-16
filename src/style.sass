@@ -1,19 +1,58 @@
+// Загальний дизайн нижче
 $white: #E8E8E8
-$red: #F05454
-$gray: #30475E
-$black: #222831
+$acs1: #F05454
+$acs2: #F6C90E
+$gray: #3A4750
+$dark: #242a31
+$black: #181c22
     
 *
-    margin: 0
-    padding: 0
+    margin: 0px
+    padding: 0px
     font-family: monospace
 
 body
     background-color: $white
     color: $black
 h1
-    color: $gray
+    color: $acs1
 
 h2
-    color: $red
-    font-size: 100px
+    color: $dark
+
+header
+    height: 100px
+    padding: 10px 5% 10px 5%
+
+footer
+    padding: 10px 5% 10px 5%
+    height: 100px
+
+//Дизайн головної сторінки нижче
+.container
+    padding: 50px 5% 50px 5%
+    border: solid $black 2px
+
+
+//Дизайн лабораторної сторінки нижче
+.labcontainer
+    padding: 1px
+    display: flex
+    justify-content: space-between
+    #sidebar
+        padding: 5px
+        min-width: 250px
+        width: auto
+    #labspace
+        padding: 5px
+        width: auto
+
+@media screen and (max-width: 750px)
+    .labcontainer
+        display: block
+
+        
+
+.container2
+    
+    border: solid $black 2px
