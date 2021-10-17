@@ -27,18 +27,25 @@ h2
 
 
 header
+    min-width: 550px
+    position: fixed
+    top: 0
+    width: 90%
+
+    .headercont
     a
         text-decoration: none
         color: $acs2
     .logo
-        min-width: 550px
         background-color: $gray
         border-radius: 10px 10px 0px 10px
         padding: 10px
+        h2
+            color: $white
     height: 70px
     padding: 10px 5% 10px 5%
     .menus
-        min-width: 550px
+
         display: flex
         justify-content: right
         .btn
@@ -54,6 +61,7 @@ header
             width: 70px
             &:hover
                 border-top: 30px solid $dark
+                text-transform: uppercase
                 span
                     top:-22.5px
 
@@ -71,14 +79,73 @@ header
 
 footer
     padding: 10px 5% 10px 5%
-    height: 100px
+    margin: 0px 5% 0px 5%
+    background-color: $gray
+    border-radius: 10px 10px 0px 0px
+    padding: 10px
+    min-height: 15px
+    color: $white
+    display: flex
+    justify-content: space-between
+
+    h2
+        color: $white
+    a
+        text-decoration: none
+        color: $white
+        &:hover
+          font-weight: bold
+          text-transform: uppercase
+          color: $acs2
 
 //Дизайн головної сторінки нижче
 .container
     padding: 50px 5% 50px 5%
     border: dashed 1px #00000050
+
+#first
+    
+    background-image: url("img/mainb.jpg") 
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 660px
+    &::before
+        background-image: url("img/mainb.jpg") 
+        background-attachment: fixed
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+.container2
+    
+    border: dashed 1px #00000050
+
+.textProSite
+    text-align: left
+    width: 400px
+.textAlignCentr
+    text-align: center
+.jyr
+    font-weight: bold
+.rozmirbukv2
+    font-size: 20px
+.velText
+    font-size: 30px
+.vidstup
+    margin-top: 20px
+
+.functionalnist
+    display: flex
+    padding: 5px
+    justify-content: space-between
+    
+    
     
 
+.opysFunct
+    max-width: 200px
+    margin: 20px
 
 //Дизайн лабораторної сторінки нижче
 .labcontainer
@@ -94,12 +161,21 @@ footer
         padding: 5px
         width: auto
 
-@media screen and (max-width: 750px)
-    .labcontainer
-        display: block
+.freespace
+    height: 100px
 
         
 
-.container2
-    
-    border: dashed 1px #00000050
+
+// Якщо екран менше 750 рх
+@media screen and (max-width: 750px)
+    .labcontainer
+        display: block
+    .functionalnist
+        flex-direction: column
+        justify-content: center
+        margin-left: auto
+        margin-right: auto
+        max-width: 400px
+        .opysFunct
+            max-width: 400px
