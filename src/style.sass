@@ -5,6 +5,8 @@ $acs2: #F6C90E
 $gray: #3A4750
 $dark: #242a31
 $black: #181c22
+$downloadcolor: #00cc00
+$downloadhover: #4d4d4d
     
 *
     -webkit-transition-property: all
@@ -31,8 +33,6 @@ header
     position: fixed
     top: 0
     width: 90%
-
-    .headercont
     a
         text-decoration: none
         color: $acs2
@@ -40,6 +40,7 @@ header
         background-color: $gray
         border-radius: 10px 10px 0px 10px
         padding: 10px
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
         h2
             color: $white
     height: 70px
@@ -49,6 +50,7 @@ header
         display: flex
         justify-content: right
         .btn
+            
             span
                 position: absolute
                 top:-20px
@@ -88,7 +90,7 @@ footer
     color: $white
     display: flex
     justify-content: space-between
-
+    
     h2
         color: $white
     a
@@ -104,22 +106,25 @@ footer
 //Дизайн головної сторінки нижче
 .container
     padding: 50px 5% 50px 5%
-    border: dashed 1px #00000050
+    //border: dashed 1px #00000050
+
+html, body, #first  //щоб перший блок був на весь екран
+    height: 100%
 
 #first
     
     background-image: url("img/mainb.jpg") 
-    background-attachment: fixed
+    //    background-attachment: fixed
     background-position: center
     background-repeat: no-repeat
     background-size: cover
-    height: 660px
-    &::before
-        background-image: url("img/mainb.jpg") 
-        background-attachment: fixed
-        background-position: center
-        background-repeat: no-repeat
-        background-size: cover
+    
+    h1
+        font-size: 80px
+        color: $white
+    display: flex
+    justify-content: center
+    align-items: center
 .container2
     
     border: dashed 1px #00000050
@@ -139,26 +144,60 @@ footer
     margin-top: 20px
 
 .opysFunct
-    max-width: 200px
+    
+    max-width: 250px
     margin: 20px
+    
+    padding: 10px
+    // 4 стрічки знизу скопіювати для об'єму і анімації
+    border-radius: 3px
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1)
+    &:hover
+        border-radius: 15px
 
 .kalend 
     max-width: 400px
     margin: 20px
+    img
+        width: 300px
 
 .chysloLab
     max-width: 400px
     margin: 20px
 
-.functionalnist
+.functionalnist, .kalendKilk, .Teacher
     display: flex
     padding: 5px
     justify-content: space-between
 
-.kalendKilk
-    display: flex
-    padding: 5px
-    justify-content: space-between
+.Teacher
+    justify-content: center
+
+#third
+    .Teacher
+
+    .photo
+        display: flex
+        align-items: center
+        flex-direction: column
+        text-align: center 
+        max-width: 300px
+        
+
+    .opys
+        margin-top: 100px
+        div
+            margin-left: 30px
+            max-width: 400px
+            margin-bottom: 10px
+
+    img
+        border-radius: 20px
+        box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1)
+        margin-bottom: 10px
+        &:hover
+            border-radius: 3px
+
 
     
     
@@ -175,51 +214,85 @@ footer
 .labcontainer
     h1
         padding: 5px
+
     h2
-            padding: 3px
+        padding: 3px
 
     padding: 1px
     display: grid 
-    grid-gap: 1em
-    justify-content: space-around
-    grid-template-columns: 10% 70%
+    justify-content: space-evenly
+    grid-template-columns: 15% 70%
     #sidebar
-        min-width: 250px
-        min-height: 100px
-        width: auto
-        
+        min-width:120px
+        max-height:250px
+        max-width:200px
     #labspace
-        width: auto
-
+        max-width:940px
+        justify-content: space-around
         #labscontent
             padding: 5px
-            .labsgrid1
+            .labgrid1
                 grid-column:1
                 grid-row:1
-            .labsgrid2
+            .labgrid2
                 grid-column:2
                 grid-row:1
-            .labsgrid3
+            .labgrid3
                 grid-column:3
                 grid-row:1
-            .labsgrid4
-                grid-column:1 / span 2
-                grid-row:2
-            .labsgrid5
+            .labgrid4
+                grid-column:1
+                grid-row:2 / span 2
+            .labgrid5
                 grid-column:2
                 grid-row:2
-            .labsgrid6
+            .labgrid6
                 grid-column:3
                 grid-row:2
-            .labsgrid7
+                .labvideo
+                    max-width:400px
+                    width: 350px
+                    height: 200px
+                    frameborder:0
+            .labgrid7
                 grid-column:2
                 grid-row:3
-            .labsgrid8
+            .labgrid8
                 grid-column:3
                 grid-row:3
 
             display: grid
             grid-gap: 2em
+
+.downloadbutton
+    background-color: $downloadcolor
+    border: none
+    color: white
+    padding: 12px 30px
+    cursor: pointer
+    font-size: 20px
+    height: 100px
+    width: 210px
+
+.downloadbutton:hover
+    background-color:$downloadhover
+    text-transform: uppercase
+
+.downloadimg
+    height: 25px
+    width: 25px
+    float: left
+
+.labGitHub
+    margin-left: 20%
+    padding-bottom:10px
+    height: 120px
+    width: 120px
+
+.labscreenimg
+    max-width:400px
+    width: 350px
+    height: 200px
 
 .freespace
     height: 100px
@@ -248,3 +321,5 @@ footer
             max-width: 650px
         .chysloLab
             max-width: 650px
+    .Teacher
+        
