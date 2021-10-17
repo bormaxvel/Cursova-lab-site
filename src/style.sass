@@ -251,8 +251,8 @@ html, body, #first  //щоб перший блок був на весь екра
                 grid-row:2
                 .labvideo
                     max-width:400px
-                    width: 350px
-                    height: 200px
+                    width: 250px
+                    height: 150px
                     frameborder:0
             .labgrid7
                 grid-column:2
@@ -291,8 +291,8 @@ html, body, #first  //щоб перший блок був на весь екра
 
 .labscreenimg
     max-width:400px
-    width: 350px
-    height: 200px
+    width: 250px
+    height: 150px
 
 .freespace
     height: 100px
@@ -302,8 +302,6 @@ html, body, #first  //щоб перший блок був на весь екра
 
 // Якщо екран менше 750 рх
 @media screen and (max-width: 750px)
-    .labcontainer
-        display: block
     .functionalnist
         flex-direction: column
         justify-content: center
@@ -322,4 +320,101 @@ html, body, #first  //щоб перший блок був на весь екра
         .chysloLab
             max-width: 650px
     .Teacher
-        
+
+
+    .labcontainer
+        padding: 1px 
+        display: grid 
+        justify-content: space-around !important
+        grid-template-columns: 20% 70% !important
+        #sidebar
+            min-width:115px
+            max-height:250px
+            max-width:200px
+        #labspace
+            max-width:750px
+            justify-content: space-around !important
+        #labscontent
+            padding: 4px
+            .labgrid1 
+                grid-column:1 !important
+                grid-row:1 !important
+            .labgrid2
+                grid-column:1 !important
+                grid-row:2 !important
+            .labgrid3 
+                grid-column:1 !important
+                grid-row:3 !important
+            .labgrid4
+                grid-column:1 !important
+                grid-row:4 !important
+            .labgrid5
+                grid-column:1 !important
+                grid-row:5 !important
+            .labgrid7
+                grid-column:1 !important
+                grid-row:6 !important
+            .labgrid6
+                grid-column:1 !important
+                grid-row:7 !important
+                .labvideo
+                    max-width:400px
+                    width: 300px !important
+                    height: 150px !important
+                    frameborder:0
+            .labgrid8
+                grid-column:1 / span2 !important
+                grid-row:8 !important
+
+            display: grid
+            grid-gap: 5em !important
+    .downloadbutton
+        margin-right:50%
+        margin-left:10%
+    .labscreenimg
+        max-width:400px
+        width: 300px !important
+        height: 150px !important
+
+
+// Якщо екран менше 1150 рх
+@media screen and (max-width: 1200px)
+    .labcontainer
+        grid-template-columns: 20% 70% !important
+    #labscontent
+        .labgrid1 
+            grid-column:1 !important
+            grid-row:1 !important
+        .labgrid2
+            grid-column:2 !important
+            grid-row:1 !important
+        .labgrid3 
+            grid-column:1 / span 2 !important
+            grid-row:3 !important
+            h1
+                margin-left: 20%
+        .labgrid4
+            grid-column:1 / span 2 !important
+            grid-row:4 !important
+        .labgrid5
+            grid-column:1 !important
+            grid-row:5 !important
+        .labgrid7
+            grid-column:2 !important
+            grid-row:5 !important
+        .labgrid6
+            grid-column:1 !important
+            grid-row:6 !important
+            .labvideo
+                max-width:400px
+                width: 250px !important
+                height: 160px !important
+                frameborder:0
+        .labgrid8
+            grid-column:2 / span2 !important
+            grid-row:6 !important
+
+    .labscreenimg
+        max-width:400px
+        width: 200px
+        height: 160px
