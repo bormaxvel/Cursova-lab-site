@@ -9,27 +9,54 @@
 </head>
 
 <body>
+
 	<header>
-		<h2>Сайт лабораторних робіт</h2>
-        <button><a href="index.html">Головна сторінка</a></button>
+        <div class = headercont>
+		    <div class="logo">
+                <h2>Сайт лабораторних робіт</h2>
+            </div>
+        </div>
+        <div class="menus">
+            <div class="btn mbtns" id="btnаfirst"><a href="index.html"><span>Головна</span></div>
+            <div class="btn"><a href="index.html#second"><span>Про сайт</span></a></div>
+            <div class="btn"><a href="index.html#third"><span>Викладач</span></a></div>
+            <div class="btn"><a href="index.html#last"><span>Функції</span></a></div>
+            <div class="btn mbtns bactive" id="btnlast"><span>Лабораторні</span></a></div>
+
+        </div>
 	</header>
+
+
     <div class="freespace"></div>
     <div class="labcontainer">
         <div class="container2" id="sidebar">
-            <div class="block2" id="">
+            <div class="block2" id="labslist">
                 <h1>Список лаб</h1>
+                <h2 class="btnlab1">1. <input type="checkbox" name="donelab1" value="donelab1"> Laba</h2>
+                <h2 class="btnlab2">2. <input type="checkbox" name="donelab2" value="donelab1"> Laba</h2>
+                <h2 class="btnlab3">3. <input type="checkbox" name="donelab3" value="donelab1"> Laba</h2>
+                <h2 class="btnlab4">4. <input type="checkbox" name="donelab4" value="donelab1"> Laba</h2>
+                <h2 class="btnlab5">5. <input type="checkbox" name="donelab5" value="donelab1"> Laba</h2>
             </div>
         </div>
         <div class="container2" id="labspace">
-            <div class="block2" id="">
-                <h1>Контент лаб</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nobis natus esse autem vel non voluptate laborum aliquam voluptatem soluta tempore eveniet, tempora eos excepturi dignissimos! Qui velit possimus placeat.</h1>
+            <div class="block2" id="labscontent">
+                <div class=labsgrid1 id="labname">1</div>
+                <div class=labsgrid2 id="labstatus">2</div>
+                <div class=labsgrid3 id="labdeadline">3</div>
+                <div class=labsgrid4 id=labinfo>4</div>
+                <div class=labsgrid5 id="labdownload">5</div>
+                <div class=labsgrid6 id="labyoutube">6</div>
+                <div class=labsgrid7 id="labgit">7</div>
+                <div class=labsgrid8 id="labscreen">8</div>
             </div>
         </div>
     </div>
-	
+    <div class="freespace"></div>
+
 	<footer>
-		<h2>Footer</h2>
+        <span>&copy; Борисенко Максим, Коваль Валентин, Горбун Олександр 2021</span>
+		<span><a href="https://github.com/bormaxvel/Cursova-lab-site">Our github repository</a></span>
 	</footer>
 	<script src="main.js"></script>
 </body>

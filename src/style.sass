@@ -75,6 +75,7 @@ header
                     top:-25px
         .bactive
             border-top: 25px solid #485e6d
+            
 
 
 footer
@@ -97,6 +98,8 @@ footer
           font-weight: bold
           text-transform: uppercase
           color: $acs2
+          
+
 
 //Дизайн головної сторінки нижче
 .container
@@ -166,18 +169,51 @@ footer
 
 
 //Дизайн лабораторної сторінки нижче
+
+
+
 .labcontainer
-    padding: 1px
-    display: flex
-    justify-content: space-between
-    #sidebar
+    h1
         padding: 5px
+    h2
+            padding: 3px
+
+    padding: 1px
+    display: grid 
+    grid-gap: 1em
+    justify-content: space-around
+    grid-template-columns: 10% 70%
+    #sidebar
         min-width: 250px
         min-height: 100px
         width: auto
+        
     #labspace
-        padding: 5px
         width: auto
+
+        #labscontent
+        
+            padding: 5px
+            .labsgrid1
+                grid-area:grid1
+            .labsgrid2
+                grid-area:grid2
+            .labsgrid3
+                grid-area:grid3
+            .labsgrid4
+                grid-area:grid4
+            .labsgrid5
+                grid-area:grid5
+            .labsgrid6
+                grid-area:grid6
+            .labsgrid7
+                grid-area:grid7
+            .labsgrid8
+                grid-area:grid8
+
+            display: grid
+            grid-template-areas: 'grid1 grid2 grid3' 'grid4 grid5 grid6' 'grid4 grid7 grid8'
+            grid-gap: 2em
 
 .freespace
     height: 100px
