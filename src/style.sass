@@ -1,12 +1,11 @@
 // Загальний дизайн нижче
-$white: #E8E8E8
-$acs1: #F05454
-$acs2: #F6C90E
+$realwhite: #f0ecde
+$white: #dff8ea
+$litegreen: #A7E9AF
+$acs: #569c81
 $gray: #3A4750
 $dark: #242a31
 $black: #181c22
-$downloadcolor: #00cc00
-$downloadhover: #4d4d4d
     
 *
     -webkit-transition-property: all
@@ -17,15 +16,19 @@ $downloadhover: #4d4d4d
     margin: 0px
     padding: 0px
     font-family: monospace
+    font-size: 15px
 
 body
     background-color: $white
     color: $black
 h1
-    color: $acs1
+    color: $acs
+    font-size: 35px
 
 h2
     color: $dark
+    font-size: 22px
+    
 
 
 header
@@ -35,7 +38,7 @@ header
     width: 90%
     a
         text-decoration: none
-        color: $acs2
+        color: $realwhite
     .logo
         background-color: $gray
         border-radius: 10px 10px 0px 10px
@@ -54,13 +57,15 @@ header
             span
                 position: absolute
                 top:-20px
-            color: $acs2
+                font-size: 14px
+            color: $realwhite
             padding: 2px
             position: relative
             border-top: 20px solid $gray
             border-left: 30px solid transparent
             height: 0px
             width: 70px
+            
             &:hover
                 border-top: 30px solid $dark
                 text-transform: uppercase
@@ -69,7 +74,7 @@ header
 
             
         .mbtns
-            width: 80px
+            width: 85px
             border-top: 25px solid $gray
             &:hover
                 border-top: 35px solid $dark
@@ -87,19 +92,20 @@ footer
     border-radius: 10px 10px 0px 0px
     padding: 10px
     min-height: 15px
-    color: $white
+    color: $realwhite
     display: flex
     justify-content: space-between
     
     h2
-        color: $white
+        color: $realwhite
+        
     a
         text-decoration: none
-        color: $white
+        color: $realwhite
         &:hover
           font-weight: bold
           text-transform: uppercase
-          color: $acs2
+          //color: $acs
           
 
 
@@ -170,7 +176,10 @@ html, body, #first  //щоб перший блок був на весь екра
     padding: 5px
     justify-content: space-between
 
+        
+
 .Teacher
+    
     justify-content: center
 
 #third
@@ -180,6 +189,9 @@ html, body, #first  //щоб перший блок був на весь екра
         flex-direction: column
         text-align: center 
         max-width: 300px
+    h1
+        text-align: center
+        margin-bottom: 15px
         
 
     .opys
@@ -190,11 +202,11 @@ html, body, #first  //щоб перший блок був на весь екра
             margin-bottom: 10px
 
     img
-        border-radius: 20px
-        box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1)
+        border-radius: 3px
+        box-shadow: 4px 4px 22px 9px rgba(26, 43, 56, 0.39)
         margin-bottom: 10px
         &:hover
-            border-radius: 3px
+            border-radius: 15px
 
 #last
 
@@ -279,7 +291,7 @@ html, body, #first  //щоб перший блок був на весь екра
             
 
 .downloadbutton
-    background-color: $downloadcolor
+    background-color: $acs
     border: none
     color: white
     padding: 12px 30px
@@ -290,7 +302,7 @@ html, body, #first  //щоб перший блок був на весь екра
     margin-left: 10%
 
 .downloadbutton:hover
-    background-color:$downloadhover
+    background-color:$gray
     text-transform: uppercase
 
 .downloadimg
