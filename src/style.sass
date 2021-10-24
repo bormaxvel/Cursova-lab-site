@@ -29,10 +29,17 @@ h2
     color: $dark
     font-size: 22px
     
-
+// .differ
+//     border-bottom: 10px dotted $black
+//     min-width: 350px
+//     max-width: 1200px
+//     width: 80%
+//     margin-left: auto
+//     margin-right: auto
+//     margin-bottom: 40px
 
 header
-    min-width: 550px
+    min-width: 560px
     position: fixed
     top: 0
     width: 90%
@@ -134,7 +141,7 @@ html, body, #first  //щоб перший блок був на весь екра
     justify-content: center
     align-items: center
 .container2
-    
+    border-radius: 15px
     border: dashed 1px #00000050
 
 .textProSite
@@ -234,10 +241,17 @@ html, body, #first  //щоб перший блок був на весь екра
 
 
 //Дизайн лабораторної сторінки нижче
-
+.labpagebody
+    display: flex
+    flex-direction: column
+.labnotfooter
+    flex: 1 0 auto
+footer //футер прижати донизу
+    flex-shrink: 0
 
 
 .labcontainer
+    
     h1
         padding: 5px
 
@@ -254,7 +268,7 @@ html, body, #first  //щоб перший блок був на весь екра
         max-width:200px
     #labspace
         width: 100%
-        margin-left: 20px
+        margin: 0 20px 0 20px 
         justify-content: space-around
         #labscontent
             
@@ -264,9 +278,9 @@ html, body, #first  //щоб перший блок був на весь екра
                 display: flex
                 justify-content: center
                 align-items: center
-                padding: 10px
+                padding: 0px
             #names
-                width: 100%
+                width: 95%
                 max-width: none
                 justify-content: space-around
                 flex-wrap: wrap
@@ -285,7 +299,7 @@ html, body, #first  //щоб перший блок був на весь екра
                 text-align: left
                 max-width: 500px
                     
-     
+  
 
 .downloadbutton
     background-color: $acs
@@ -300,6 +314,7 @@ html, body, #first  //щоб перший блок був на весь екра
 .downloadbutton:hover
     background-color:$gray
     text-transform: uppercase
+    border-radius: 50px
 
 .downloadimg
     height: 25px
@@ -348,22 +363,25 @@ html, body, #first  //щоб перший блок був на весь екра
 
 
     //labs
+    
     .labcontainer
+        
         padding: 1px 
         display: flex 
         flex-direction: column 
         justify-content: center
         align-items: center
+        #labspace
+            margin: 0px
         #sidebar
+            
             max-height:250px
             width: 250px
         #labscontent
-            display: block !important
+            flex-direction: column
             
             .labbody
-                display: block !important
-                #labinteract
-                    display: block
+                flex-direction: column
 
    
 
