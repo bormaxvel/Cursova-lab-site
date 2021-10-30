@@ -54,7 +54,7 @@ window.addEventListener('click', function(event){
         <div class="" id="labinteract">
             <div class="insidelabinteract">
                 <div class="flexellabint" id="labdownload">
-                    <button class="downloadbutton"><i class="labdownload"><img class="downloadimg" src="img/download.png">  Download</i></button>
+                    <button class="downloadbutton"><i class="labdownload"><img class="downloadimg" src="img/download.png">  Download</i></button>
                 </div>
                 <div class="flexellabint" id="labyoutube">
                     <iframe class="labvideo" src="https://www.youtube.com/embed/9WjXGsymT5M" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -168,3 +168,32 @@ window.addEventListener('click', function(event){
 //     year: now.getFullYear()
 //   };
 //   document.getElementById('calendar').innerHTML = calendar(params);
+
+//FETCH
+
+let URL1 = "http://localhost:1234/labs.json"
+
+let res1
+
+function GetData(URL1){
+  fetch(URL1)
+    .then((response) => {
+      return response.json()
+    })
+    .then((fetch_res1) => {  
+      //alert(fetch_res1)
+      res1 = fetch_res1
+      vstavka(res1)
+
+  })
+  .catch(err=>alert("Сталася неочікувана помилка =( ", err))
+}
+
+GetData(URL1)
+
+const vstavka = (response) => {
+
+  console.log(res1) //Zminna z lab1, lab2, lab3, lab4, lab5
+
+
+}
