@@ -1,8 +1,9 @@
 // Загальний дизайн нижче
 $realwhite: #f0ecde
-$white: #e4f1ea
-$litegreen: #A7E9AF
-$acs: #569c81
+$white: #E6E6E6
+$liteblue: #93B5C6
+$green: #53dd88
+$acs: #6B84E8
 $gray: #3A4750
 $dark: #242a31
 $black: #181c22
@@ -47,12 +48,15 @@ header
         text-decoration: none
         color: $realwhite
     .logo
+        display: flex
+        justify-content: space-between
         background-color: $gray
         border-radius: 10px 10px 0px 10px
         padding: 10px
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
         h2
             color: $white
+            font-size: 20px
     height: 70px
     padding: 10px 5% 10px 5%
     .menus
@@ -223,26 +227,58 @@ html, body, #first  //щоб перший блок був на весь екра
             border-radius: 15px
 
 #last
-
-    .vaglyve
-        max-width: 300px
-    .kalendKilk
-        align-items: center
-        justify-content: space-around
-        display: flex
-        padding: 5px
-    .opysLaby
-        display: flex
-        align-items: center
-        flex-direction: column
-        justify-content: center
-        min-width: 300px
-    .text
-        max-width: 500px
+    display: none
+    // .vaglyve
+    //     max-width: 300px
+    // .kalendKilk
+    //     align-items: center
+    //     justify-content: space-around
+    //     display: flex
+    //     padding: 5px
+    // .opysLaby
+    //     display: flex
+    //     align-items: center
+    //     flex-direction: column
+    //     justify-content: center
+    //     min-width: 300px
+    // .text
+    //     max-width: 500px
+    
+.coolbtn
+    border: none
+    border-radius: 15px
+    height: 35px
+    width: 120px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 5px
+    cursor: pointer
+    background-image: linear-gradient(45deg, $liteblue 50%, $acs 50%)
+    background-position: 25%
+    background-size: 400%
+    -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out
+    transition: background 500ms ease-in-out, color 500ms ease-in-out
+    &:hover
+        color: $realwhite
+        background-position: 100%
+    input
+        margin-right: 10px
     
 
+input
+    width: 15px 
+    height: 15px
+    border-radius: 50%
+    transition: box-shadow .3s
+    background: lightgrey
+    cursor: pointer
+    border: 0
+    appearance: none 
+    -webkit-appearance: none
 
-
+input:checked 
+    box-shadow: inset 0 0 0 20px $green
 
 
 //Дизайн лабораторної сторінки нижче
@@ -269,11 +305,16 @@ footer //футер прижати донизу
     display: flex
     justify-content: space-between
     #sidebar
+        
         margin-left: 10px
         min-width:150px
         max-height:250px
         max-width:200px
         background-color: #4b635310
+        #labslist
+            display: flex
+            flex-direction: column
+            align-items: center
     #labspace
         width: 100%
         margin: 0 20px 0 20px 
@@ -312,7 +353,9 @@ footer //футер прижати донизу
   
 
 .downloadbutton
-    background-color: $acs
+    display: flex
+    align-items: center
+    justify-content: space-around
     border: none
     color: white
     padding: 12px 30px
@@ -320,11 +363,15 @@ footer //футер прижати донизу
     font-size: 20px
     height: 100px
     width: 210px
-
-.downloadbutton:hover
-    background-color:$gray
-    text-transform: uppercase
-    border-radius: 50px
+    border-radius: 30px
+    background-image: linear-gradient(45deg, $liteblue 50%, $acs 50%)
+    background-position: 25%
+    background-size: 400%
+    -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out
+    transition: background 500ms ease-in-out, color 500ms ease-in-out
+    &:hover
+        color: $realwhite
+        background-position: 100%
 
 .downloadimg
     height: 25px
@@ -340,7 +387,11 @@ footer //футер прижати донизу
 .labscreenimg
     max-width:400px
     width: 250px
-    height: 150px
+    &:hover
+        transform: scale(1.7)
+        z-index: 1
+        transition: transform .5s
+        
 
 .freespace
     height: 100px
