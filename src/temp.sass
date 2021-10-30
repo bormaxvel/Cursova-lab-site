@@ -1,39 +1,40 @@
-$day_size: 70
-$main_color: #60c84f
+span
+position: relative
+display: inline-flex
+width: 180px
+height: 55px
+margin: 0 15px
+perspective: 1000px
 
-#calendar
-    width: 7 * $day_size + px
-    margin: 0 auto
+span a
+    font-size: 19px
+    letter-spacing: 1px
+    transform-style: preserve-3d
+    transform: translateZ(-25px)
+    transition: transform .25s
+    font-family: 'Montserrat', sans-serif
 
-    h2
-        line-height: 170px
-        margin: 0
-        font-weight: 300
-        color: #fff
-        background: $main_color
-        text-align: center
+span a:before,
+span a:after
+    position: absolute
+    content: "BUTTON"
+    height: 55px
+    width: 180px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 5px solid black
+    box-sizing: border-box
+    border-radius: 5px
 
-    table
-        width: 100%
-        margin-top: -42px
-        border-collapse: collapse
+span a:before
+    color: #fff
+    background: #000
+    transform: rotateY(0deg) translateZ(25px)
 
-    .week-days
-        color: #fff
+span a:after
+    color: #000
+    transform: rotateX(90deg) translateZ(25px)
 
-    .day
-        width: $day_size + px
-        height: 40px
-        text-align: center
-
-    .week
-        .day
-            background: #eee
-
-        &:not(.other-month):hover
-            color: #fff
-            background: $main_color
-
-    .other-month
-        opacity: 0.5
-
+span a:hover
+    transform: translateZ(-25px) rotateX(-90deg)
