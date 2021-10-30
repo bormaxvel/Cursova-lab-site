@@ -77,3 +77,33 @@ function calendar(params) {
     year: now.getFullYear()
   };
   document.getElementById('calendar').innerHTML = calendar(params);
+
+
+//FETCH
+
+let URL1 = "http://localhost:1234/labs.json"
+
+let res1
+
+function GetData(URL1){
+  fetch(URL1)
+    .then((response) => {
+      return response.json()
+    })
+    .then((fetch_res1) => {  
+      //alert(fetch_res1)
+      res1 = fetch_res1
+      vstavka(res1)
+
+  })
+  .catch(err=>alert("Сталася неочікувана помилка =( ", err))
+}
+
+GetData(URL1)
+
+const vstavka = (response) => {
+
+  console.log(res1) //Zminna z lab1, lab2, lab3, lab4, lab5
+
+
+}
