@@ -1,0 +1,39 @@
+$day_size: 70
+$main_color: #60c84f
+
+#calendar
+    width: 7 * $day_size + px
+    margin: 0 auto
+
+    h2
+        line-height: 170px
+        margin: 0
+        font-weight: 300
+        color: #fff
+        background: $main_color
+        text-align: center
+
+    table
+        width: 100%
+        margin-top: -42px
+        border-collapse: collapse
+
+    .week-days
+        color: #fff
+
+    .day
+        width: $day_size + px
+        height: 40px
+        text-align: center
+
+    .week
+        .day
+            background: #eee
+
+        &:not(.other-month):hover
+            color: #fff
+            background: $main_color
+
+    .other-month
+        opacity: 0.5
+
