@@ -25,58 +25,79 @@ window.addEventListener('click', function(event){
     }
     console.log(a)
     //шаблон
-    const shablon = `<div class="block2 dell" id="labscontent">
-    <div class="flexel" id="names">
-        <div class="flexel2" id="labname">
-            <h1>Laba hahaha (Зробити щось там)</h1>
-        </div>
-        <div class="flexel2" id="labstatus">
-            <h1>Час роботи вийшов</h1>
-        </div>
-        <div class="flexel2" id="labdeadline">
-            <h1>До 01.01.2001 1:00</h1>
-        </div>
-    </div>
-    <div class="differ"></div>
-    <div class="labbody">
-        <div class="flexel" id=labinfo>
-            <h2>Опис роботи:</h2>
-            Далi крутий опис Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sequi consequatur veniam voluptas nostrum? Beatae atque earum, vel, iure asperiores quas nesciunt eaque sed laboriosam enim, tempore quos debitis qui.
-            <ol>
-                <li>zavdanna</li>
-                <li>zavdanna</li>
-                <li>zavdanna</li>
-                <li>zavdanna</li>
-                <li>zavdanna</li>
-                <li>zavdanna</li>
-            </ol>
-        </div>
-        <div class="" id="labinteract">
-            <div class="insidelabinteract">
-                <div class="flexellabint" id="labdownload">
-                    <button class="downloadbutton"><i class="labdownload"><img class="downloadimg" src="img/download.png">  Download</i></button>
-                </div>
-                <div class="flexellabint" id="labyoutube">
-                    <iframe class="labvideo" src="https://www.youtube.com/embed/9WjXGsymT5M" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="insidelabinteract">
-                <div class="flexellabint" id="labgit">
-                    <a href="https://github.com/RomanMykolaichuk/wd2021/tree/LectionFetchAPI" target="_blank"><img class="labGitHub" src="img/GitHub.png"></a>
-                </div>
-                <div class="flexellabint" id="labscreen">
-                    <img class="labscreenimg" src="img/screen.png">
-                </div>
-            </div>
-            
-        </div>
-    </div>
+
+
+// FETCH
+
+    const URL= "labs.json";
+    let res;
+    fetch(URL)
+    .then(response=> response.json())
+    .then(r5=>{
+        res = r5; 
+     //   console.log(res);
+        vstavka(res)
+        
+    })
+      .catch(err=>alert("Сталася неочікувана помилка =( ", err))
+
+      const vstavka = (response) =>{
     
+        const shablon = `<div class="block2 dell" id="labscontent">
+        <div class="flexel" id="names">
+            <div class="flexel2" id="labname">
+                <h1>${res[a].name}</h1>
+            </div>
+            <div class="flexel2" id="labstatus">
+                <h1>Час роботи вийшов</h1>
+            </div>
+            <div class="flexel2" id="labdeadline">
+                <h1>До ${res[a].to_time}</h1>
+            </div>
+        </div>
+        <div class="differ"></div>
+        <div class="labbody">
+            <div class="flexel" id=labinfo>
+                <h2>Опис роботи:</h2>
+                ${res[a].info}
+                <ol>
+                    <li>${res[a].info_steps[0]}</li>
+                    <li>${res[a].info_steps[1]}</li>
+                    <li>${res[a].info_steps[2]}</li>
+                    <li>${res[a].info_steps[3]}</li>
+                    <li>${res[a].info_steps[4]}</li>
     
-</div>`
+                </ol>
+            </div>
+            <div class="" id="labinteract">
+                <div class="insidelabinteract">
+                    <div class="flexellabint" id="labdownload">
+                        <button class="downloadbutton"><i class="labdownload"><img class="downloadimg" src="img/download.png">  Download</i></button>
+                    </div>
+                    <div class="flexellabint" id="labyoutube">
+                        <iframe class="labvideo" src="${res[a].video_link}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="insidelabinteract">
+                    <div class="flexellabint" id="labgit">
+                        <a href="${res[a].git_link}" target="_blank"><img class="labGitHub" src="img/GitHub.png"></a>
+                    </div>
+                    <div class="flexellabint" id="labscreen">
+                        <img class="labscreenimg" src="${res[a].photo_link}">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>`
+    
+      mistceVstavky.insertAdjacentHTML('beforeend', shablon); 
+    }
 
     
-    mistceVstavky.insertAdjacentHTML('beforeend', shablon)
+    
 
   }
 
@@ -171,7 +192,7 @@ window.addEventListener('click', function(event){
 
 //FETCH
 
-let URL1 = "http://localhost:1234/labs.json"
+let URL1 = "labs.json"
 
 let res1
 
