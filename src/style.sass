@@ -29,14 +29,14 @@ h2
     color: $dark
     font-size: 22px
     
-// .differ
-//     border-bottom: 10px dotted $black
-//     min-width: 350px
-//     max-width: 1200px
-//     width: 80%
-//     margin-left: auto
-//     margin-right: auto
-//     margin-bottom: 40px
+.differ
+    border-bottom: 15px dotted $black
+    min-width: 350px
+    max-width: 1200px
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 40px
 
 header
     min-width: 560px
@@ -114,11 +114,16 @@ footer
         &:hover
           font-weight: bold
           text-transform: uppercase
-          //color: $acs
+
           
 
 
 //Дизайн головної сторінки нижче
+.container
+    display: flex
+    justify-content: center
+.block
+    max-width: 70%
 .container
     padding: 50px 5% 50px 5%
     //border: dashed 1px #00000050
@@ -396,42 +401,41 @@ footer //футер прижати донизу
 //-------------------------- календарік
 
 
+#calendar
+    width: 7 * 70px
+    margin: 0 auto
 
-#calendar 
-  width: 490px
-  margin: 0 auto
+    h2
+        line-height: 170px
+        margin: 0
+        font-weight: 300
+        color: $realwhite
+        background: $acs
+        text-align: center
 
-#calendar h2 
-  line-height: 170px
-  margin: 0
-  font-weight: 300
-  color: #fff
-  background: #60c84f
-  text-align: center
+    table
+        width: 100%
+        margin-top: -42px
+        border-collapse: collapse
 
-#calendar table 
-  width: 100%
-  margin-top: -42px
-  border-collapse: collapse
+    .week-days
+        color: $realwhite
 
-#calendar .week-days 
-  color: #fff
+    .day
+        width: 70px
+        height: 40px
+        text-align: center
 
-#calendar .day 
-  width: 70px
-  height: 40px
-  text-align: center
+    .week
+        .day
+            background: $realwhite
 
-#calendar .week .day 
-  background: #eee
+            &:not(.other-month):hover
+                color: $realwhite
+                background: $acs
 
-#calendar .week .day:not(.other-month):hover 
-  color: #fff
-  background: #60c84f
+    .other-month
+        opacity: 0.5
 
-#calendar .other-month 
-  opacity: 0.5
-
-
-p 
-  text-align: center
+    p
+        text-align: center
