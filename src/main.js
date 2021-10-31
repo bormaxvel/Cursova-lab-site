@@ -42,7 +42,16 @@ window.addEventListener('click', function(event){
       .catch(err=>alert("Сталася неочікувана помилка =( ", err))
 
       const vstavka = (response) =>{
-    
+        
+        var mozhna = ""; //Just zminna z tekstom
+        console.log(mozhna_sche_zdaty); // array[] de 1 - labs, yaki mozhna zdaty
+        //console.log(a);
+        if (mozhna_sche_zdaty[a] == 0){ //Tak mozhna chy Ni ???? (vypadok NO)
+          mozhna = "Час роботи вийшов";
+        }
+        else{ //(Vypadok TAK)
+          mozhna = "Роботу ще можна здати";
+        }
         const shablon = `
         
         <div class="block2 dell" id="labscontent">
@@ -51,7 +60,7 @@ window.addEventListener('click', function(event){
                 <h1>${res[a].name}</h1>
             </div>
             <div class="flexel2" id="labstatus">
-                <h1>Час роботи вийшов</h1>
+                <h1>${mozhna}</h1>
             </div>
             <div class="flexel2" id="labdeadline">
                 <h1>${res[a].to_time}</h1>
@@ -97,9 +106,6 @@ window.addEventListener('click', function(event){
       mistceVstavky.insertAdjacentHTML('beforeend', shablon); 
     }
 
-    
-    
-
   }
 
 })
@@ -140,9 +146,8 @@ fetch(URL)
           ii = i;
         }
       }
-      console.log(mozhna_sche_zdaty);
-      console.log(nearest_deadline);
+      //console.log(mozhna_sche_zdaty);
+      //console.log(nearest_deadline);
     }
     next_laba.innerHTML = `<h2> Наступна лабораторна №${ii + 1} до ${nearest_deadline.to_time} </h2>`; //Vstavka nearest DEADLINE in logo (index.html)
-    console.log(nearest_deadline.to_time)
   }
