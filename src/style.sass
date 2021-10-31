@@ -63,6 +63,14 @@ a
 
     100%
         transform: rotate(0deg)
+
+@keyframes DiorganyiNadpys
+    0%
+        transform: rotate(-10deg) translate(100px, -50px)
+    50%
+        transform: translate(0, -100px)
+    100%
+        transform: rotate(10deg) translate(-100px, -50px)
     
 header
     min-width: 560px
@@ -171,6 +179,10 @@ html, body, #first  //щоб перший блок був на весь екра
     h1
         font-size: 80px
         color: $white
+        animation-name: DiorganyiNadpys
+        animation-duration: 1.5s
+        animation-iteration-count: infinite
+        animation-direction: alternate
     display: flex
     justify-content: center
     align-items: center
@@ -197,34 +209,24 @@ html, body, #first  //щоб перший блок був на весь екра
     min-width: 150px
     margin: 20px
     text-align: center
-    
     padding: 10px
     // 4 стрічки знизу скопіювати для об'єму і анімації
-    border-radius: 3px
-    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1)
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1)
+
+
     &:hover
-        animation: 0.5s shake
-
-.kalend 
-    max-width: 400px
-    margin: 20px
-    img
-        width: 300px
-
-.chysloLab
-    max-width: 400px
-    margin: 20px
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+        border-left: 8px solid $liteblue
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
 .functionalnist, .Teacher
     display: flex
     padding: 5px
     justify-content: space-between
     flex-wrap: wrap
-
-        
-
 .Teacher
-    
     justify-content: center
 
 #third
@@ -249,26 +251,6 @@ html, body, #first  //щоб перший блок був на весь екра
         border-radius: 3px
         box-shadow: 4px 4px 22px 9px rgba(26, 43, 56, 0.39)
         margin-bottom: 10px
-        &:hover
-            animation: 0.5s shake
-
-#last
-    display: none
-    // .vaglyve
-    //     max-width: 300px
-    // .kalendKilk
-    //     align-items: center
-    //     justify-content: space-around
-    //     display: flex
-    //     padding: 5px
-    // .opysLaby
-    //     display: flex
-    //     align-items: center
-    //     flex-direction: column
-    //     justify-content: center
-    //     min-width: 300px
-    // .text
-    //     max-width: 500px
     
 .coolbtn
     border: none
@@ -434,26 +416,6 @@ footer //футер прижати донизу
 
 // Якщо екран менше 750 рх
 @media screen and (max-width: 750px)
-    //main
-    // .functionalnist
-    //     flex-direction: column
-    //     justify-content: center
-    //     margin-left: auto
-    //     margin-right: auto
-    //     max-width: 400px
-    //     .opysFunct
-    //         max-width: 400px
-    .kalendKilk
-        flex-direction: column
-        justify-content: center
-        margin-left: auto
-        margin-right: auto
-        align-items: center
-        .kalend
-            max-width: 650px
-        .chysloLab
-            max-width: 650px
-
 
     //labs
     #labinfo
@@ -477,48 +439,4 @@ footer //футер прижати донизу
             
             .labbody
                 flex-direction: column
-                
 
-   
-
-//-------------------------- календарік
-
-
-#calendar
-    width: 7 * 70px
-    margin: 0 auto
-
-    h2
-        line-height: 170px
-        margin: 0
-        font-weight: 300
-        color: $realwhite
-        background: $acs
-        text-align: center
-
-    table
-        width: 100%
-        margin-top: -42px
-        border-collapse: collapse
-
-    .week-days
-        color: $realwhite
-
-    .day
-        width: 70px
-        height: 40px
-        text-align: center
-
-    .week
-        .day
-            background: $realwhite
-
-            &:not(.other-month):hover
-                color: $realwhite
-                background: $acs
-
-    .other-month
-        opacity: 0.5
-
-    p
-        text-align: center
