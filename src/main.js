@@ -43,7 +43,9 @@ window.addEventListener('click', function(event){
 
       const vstavka = (response) =>{
     
-        const shablon = `<div class="block2 dell" id="labscontent">
+        const shablon = `
+        
+        <div class="block2 dell" id="labscontent">
         <div class="flexel" id="names">
             <div class="flexel2" id="labname">
                 <h1>${res[a].name}</h1>
@@ -52,7 +54,7 @@ window.addEventListener('click', function(event){
                 <h1>Час роботи вийшов</h1>
             </div>
             <div class="flexel2" id="labdeadline">
-                <h1>До ${res[a].to_time}</h1>
+                <h1>${res[a].to_time}</h1>
             </div>
         </div>
         <div class="differ smalldiffer"></div>
@@ -61,18 +63,17 @@ window.addEventListener('click', function(event){
                 <h2>Опис роботи:</h2>
                 ${res[a].info}
                 <ol>
-                    <li>${res[a].info_steps[0]}</li>
-                    <li>${res[a].info_steps[1]}</li>
-                    <li>${res[a].info_steps[2]}</li>
-                    <li>${res[a].info_steps[3]}</li>
-                    <li>${res[a].info_steps[4]}</li>
-    
+                  <li>${res[a].info_steps[0]}</li>
+                  <li>${res[a].info_steps[1]}</li>
+                  <li>${res[a].info_steps[2]}</li>
+                  <li>${res[a].info_steps[3]}</li>
+                  <li>${res[a].info_steps[4]}</li>
                 </ol>
             </div>
             <div class="" id="labinteract">
-                <div class="insidelabinteract">
+                <div class="insidelabinteract insidelabinteracttop">
                     <div class="flexellabint" id="labdownload">
-                        <button class="downloadbutton"><i class="labdownload"><img class="downloadimg" src="img/download.png">  Download</i></button>
+                        <button class="downloadbutton"><img class="downloadimg" src="download.142aca94.png">Download</button>
                     </div>
                     <div class="flexellabint" id="labyoutube">
                         <iframe class="labvideo" src="${res[a].video_link}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -80,7 +81,7 @@ window.addEventListener('click', function(event){
                 </div>
                 <div class="insidelabinteract">
                     <div class="flexellabint" id="labgit">
-                        <a href="${res[a].git_link}" target="_blank"><img class="labGitHub" src="img/GitHub.png"></a>
+                        <a href="${res[a].git_link}" target="_blank"><img class="labGitHub" src="GitHub.6cdce7f1.png"></a>
                     </div>
                     <div class="flexellabint" id="labscreen">
                         <img class="labscreenimg" src="${res[a].photo_link}">
