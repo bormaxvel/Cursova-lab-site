@@ -8,7 +8,8 @@
         "download_link": "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=169E5pMeHAF68kMz8paAOMyCl9EAx4Dnx",
         "video_link": "https://www.youtube.com/embed/9WjXGsymT5M",
         "git_link": "https://github.com/RomanMykolaichuk/wd2021/tree/LectionFetchAPI",
-        "photo_link": "img/lab1.png"
+        "photo_link": "img/lab1.png",
+        "time": "2001, 1, 1"
     },
     {
         "name": "Laba 2 (Зробити ще щось там)",
@@ -18,7 +19,8 @@
         "download_link": "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=169E5pMeHAF68kMz8paAOMyCl9EAx4Dnx",
         "video_link": "https://www.youtube.com/embed/9WjXGsymT5M",
         "git_link": "https://github.com/RomanMykolaichuk/wd2021/tree/LectionFetchAPI",
-        "photo_link": "img/lab1.png"
+        "photo_link": "img/lab1.png",
+        "time": "2005, 5, 5"
     },
     {
         "name": "Laba 3 (В 3 раз щось там зробити)",
@@ -28,7 +30,8 @@
         "download_link": "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=169E5pMeHAF68kMz8paAOMyCl9EAx4Dnx",
         "video_link": "https://www.youtube.com/embed/9WjXGsymT5M",
         "git_link": "https://github.com/RomanMykolaichuk/wd2021/tree/LectionFetchAPI",
-        "photo_link": "img/lab1.png"
+        "photo_link": "img/lab1.png",
+        "time": "2010, 10, 10"
     },
     {
         "name": "Laba 4 (Короч, ще роби)",
@@ -38,7 +41,8 @@
         "download_link": "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=169E5pMeHAF68kMz8paAOMyCl9EAx4Dnx",
         "video_link": "https://www.youtube.com/embed/9WjXGsymT5M",
         "git_link": "https://github.com/RomanMykolaichuk/wd2021/tree/LectionFetchAPI",
-        "photo_link": "img/lab1.png"
+        "photo_link": "img/lab1.png",
+        "time": "2012, 12, 12"
     },
     {
         "name": "Laba 5 (Зроби востаннє щось там)",
@@ -48,6 +52,7 @@
         "download_link": "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=169E5pMeHAF68kMz8paAOMyCl9EAx4Dnx",
         "video_link": "https://www.youtube.com/embed/9WjXGsymT5M",
         "git_link": "https://github.com/RomanMykolaichuk/wd2021/tree/LectionFetchAPI",
-        "photo_link": "img/lab1.png"
+        "photo_link": "img/lab1.png",
+        "time": "2022, 11, 30"
     }
 ]

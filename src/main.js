@@ -34,10 +34,10 @@ window.addEventListener('click', function(event){
     fetch(URL)
     .then(response=> response.json())
     .then(r5=>{
-        res = r5; 
-     //   console.log(res);
-        vstavka(res)
-        
+      res = r5; 
+     //console.log(res);
+      vstavka(res)
+      mozhna_zdaty(res);
     })
       .catch(err=>alert("Сталася неочікувана помилка =( ", err))
 
@@ -102,6 +102,48 @@ window.addEventListener('click', function(event){
   }
 
 })
+
+
+
+//To_check if laby mozhna zdaty
+//FETCH she raz pro vsyiak vypadok
+
+let mozhna_sche_zdaty = [0, 0, 0, 0, 0] // IF mozhna_sche_zdaty[i+1] = 1  => № lab, yaki mozhna zdaty
+let nearest_deadline = 0 // var with the nearest deadline
+let ii = 0 //Its number (ID in a JSON)
+
+// FETCH
+const URL= "labs.json";
+let res2;
+fetch(URL)
+.then(response=> response.json())
+.then(r6=>{
+  res2 = r6; 
+ //console.log(res2);
+  mozhna_zdaty(res2);  
+  })
+  .catch(err=>alert("Сталася неочікувана помилка =( ", err))
+
+  const mozhna_zdaty = (response) => {
+    //console.log(new Date());
+    for (var i = 0; i < res2.length; i++){
+      //console.log(new Date(res[i].time));
+      if(new Date(res2[i].time) > new Date()){ //IF Deadline > Present time => laba can be submitted in time
+        mozhna_sche_zdaty[i] = 1;
+        if (nearest_deadline == 0){ //The first deadline which could be submitted, nothing to compare at the moment
+          nearest_deadline = res2[i];
+          ii = i;
+        }
+        else if(new Date(nearest_deadline.time) > new Date(res2[i].time)){  //A Search: I just want to find the NEAREST laba and then push it to the logo or into smth else 
+          nearest_deadline = res2[i];
+          ii = i;
+        }
+      }
+      console.log(mozhna_sche_zdaty);
+      console.log(nearest_deadline);
+    }
+    next_laba.innerHTML = `<h2> Наступна лабораторна №${ii + 1} до ${nearest_deadline.to_time} </h2>`; //Vstavka nearest DEADLINE in logo (index.html)
+  }
 
 
 
@@ -191,7 +233,7 @@ window.addEventListener('click', function(event){
 //   document.getElementById('calendar').innerHTML = calendar(params);
 
 //FETCH
-
+/*
 let URL1 = "labs.json"
 
 let res1
@@ -205,7 +247,6 @@ function GetData(URL1){
       //alert(fetch_res1)
       res1 = fetch_res1
       vstavka(res1)
-
   })
   .catch(err=>alert("Сталася неочікувана помилка =( ", err))
 }
@@ -213,8 +254,5 @@ function GetData(URL1){
 GetData(URL1)
 
 const vstavka = (response) => {
-
   console.log(res1) //Zminna z lab1, lab2, lab3, lab4, lab5
-
-
-}
+} */
