@@ -73,7 +73,7 @@ window.addEventListener('click', function(event){
             <div class="" id="labinteract">
                 <div class="insidelabinteract insidelabinteracttop">
                     <div class="flexellabint" id="labdownload">
-                        <button class="downloadbutton"><img class="downloadimg" src="download.142aca94.png">Download</button>
+                    <a href="${res[a].download_link}" target="_blank"><button class="downloadbutton"><img class="downloadimg" src="download.142aca94.png">Download</button></a>
                     </div>
                     <div class="flexellabint" id="labyoutube">
                         <iframe class="labvideo" src="${res[a].video_link}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
