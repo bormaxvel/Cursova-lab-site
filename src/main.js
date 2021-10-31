@@ -55,7 +55,7 @@ window.addEventListener('click', function(event){
                 <h1>До ${res[a].to_time}</h1>
             </div>
         </div>
-        <div class="differ"></div>
+        <div class="differ smalldiffer"></div>
         <div class="labbody">
             <div class="flexel" id=labinfo>
                 <h2>Опис роботи:</h2>
@@ -143,6 +143,7 @@ fetch(URL)
       console.log(nearest_deadline);
     }
     next_laba.innerHTML = `<h2> Наступна лабораторна №${ii + 1} до ${nearest_deadline.to_time} </h2>`; //Vstavka nearest DEADLINE in logo (index.html)
+    console.log(nearest_deadline.to_time)
   }
 
 

@@ -25,20 +25,45 @@ body
 h1
     color: $acs
     font-size: 35px
+.mainh1
+    margin-bottom: 20px
 
 h2
     color: $dark
     font-size: 22px
+
+
+a
+    text-decoration: none
+    color: $acs
+    &:hover
+        text-transform: uppercase
     
 .differ
-    border-bottom: 15px dotted $black
+    border-bottom: 15px dotted $liteblue
     min-width: 350px
     max-width: 1200px
     width: 80%
     margin-left: auto
     margin-right: auto
-    margin-bottom: 40px
 
+.smalldiffer
+    border-bottom: 5px dashed $liteblue
+    margin-bottom: 70px
+
+@keyframes shake
+    25%
+        transform: rotate(-10deg)
+
+    50%
+        transform: rotate(10deg)
+
+    75%
+        transform: rotate(-10deg)
+
+    100%
+        transform: rotate(0deg)
+    
 header
     min-width: 560px
     position: fixed
@@ -127,9 +152,9 @@ footer
     display: flex
     justify-content: center
 .block
-    max-width: 70%
+    max-width: 80%
 .container
-    padding: 50px 5% 50px 5%
+    padding: 100px 5% 100px 5%
     //border: dashed 1px #00000050
 
 html, body, #first  //щоб перший блок був на весь екран
@@ -149,12 +174,10 @@ html, body, #first  //щоб перший блок був на весь екра
     display: flex
     justify-content: center
     align-items: center
-.container2
-    border-radius: 15px
-    border: dashed 1px #00000050
 
 .textProSite
-    text-align: left
+    margin: 10px auto 10px auto
+    text-align: justify
     width: 400px
 .textAlignCentr
     text-align: center
@@ -169,15 +192,18 @@ html, body, #first  //щоб перший блок був на весь екра
 
 .opysFunct
     
-    max-width: 250px
+    //max-width: 250px
+    width: 17%
+    min-width: 150px
     margin: 20px
+    text-align: center
     
     padding: 10px
     // 4 стрічки знизу скопіювати для об'єму і анімації
     border-radius: 3px
     box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1)
     &:hover
-        border-radius: 15px
+        animation: 0.5s shake
 
 .kalend 
     max-width: 400px
@@ -193,6 +219,7 @@ html, body, #first  //щоб перший блок був на весь екра
     display: flex
     padding: 5px
     justify-content: space-between
+    flex-wrap: wrap
 
         
 
@@ -209,11 +236,10 @@ html, body, #first  //щоб перший блок був на весь екра
         max-width: 300px
     h1
         text-align: center
-        margin-bottom: 15px
         
 
     .opys
-        margin-top: 100px
+        margin: auto 0 auto
         div
             margin-left: 30px
             max-width: 400px
@@ -224,7 +250,7 @@ html, body, #first  //щоб перший блок був на весь екра
         box-shadow: 4px 4px 22px 9px rgba(26, 43, 56, 0.39)
         margin-bottom: 10px
         &:hover
-            border-radius: 15px
+            animation: 0.5s shake
 
 #last
     display: none
@@ -305,7 +331,8 @@ footer //футер прижати донизу
     display: flex
     justify-content: space-between
     #sidebar
-        
+        border: dashed 1px $liteblue
+        border-radius: 15px
         margin-left: 10px
         min-width:150px
         max-height:250px
@@ -319,6 +346,7 @@ footer //футер прижати донизу
         width: 100%
         margin: 0 20px 0 20px 
         justify-content: space-around
+        padding: 50px
         #labscontent
             
             .flexel, .flexellabint
@@ -333,7 +361,6 @@ footer //футер прижати донизу
                 max-width: none
                 justify-content: space-around
                 flex-wrap: wrap
-                margin-bottom: 40px
             .labbody
                 display: flex
                 justify-content: space-around
@@ -344,6 +371,8 @@ footer //футер прижати донизу
                         display: flex
                         flex-wrap: wrap
                         justify-content: space-around
+                    .insidelabinteracttop
+                        margin-bottom: 50px
             #labinfo
                 flex-direction: column
                 text-align: left
@@ -383,10 +412,13 @@ footer //футер прижати донизу
 .labGitHub
     height: 120px
     width: 120px
+    &:hover
+        animation: 0.5s shake
 
 .labscreenimg
     max-width:400px
     width: 250px
+    border: solid 2px $liteblue
     &:hover
         transform: scale(1.7)
         z-index: 1
@@ -394,7 +426,7 @@ footer //футер прижати донизу
         
 
 .freespace
-    height: 100px
+    height: 70px
 
 @media screen and (max-width: 1209px)
     .labbody
@@ -403,14 +435,14 @@ footer //футер прижати донизу
 // Якщо екран менше 750 рх
 @media screen and (max-width: 750px)
     //main
-    .functionalnist
-        flex-direction: column
-        justify-content: center
-        margin-left: auto
-        margin-right: auto
-        max-width: 400px
-        .opysFunct
-            max-width: 400px
+    // .functionalnist
+    //     flex-direction: column
+    //     justify-content: center
+    //     margin-left: auto
+    //     margin-right: auto
+    //     max-width: 400px
+    //     .opysFunct
+    //         max-width: 400px
     .kalendKilk
         flex-direction: column
         justify-content: center
